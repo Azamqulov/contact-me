@@ -1,28 +1,49 @@
 <template>
   <main>
-    <div class="container text-white">
-        <div class="logo">
-            <img src="../assets/logo.png" alt="Logo">
-            <h1></h1>
+    <div class="container text-white bg-gray-800">
+      <div
+        class="navbar flex justify-between"
+        v-for="item in navbartitle"
+        :key="item"
+      >
+        <div class="logo flex">
+          <img src="../assets/logo.png" alt="Logo" />
+          <h1>
+            {{ item.userName }} <span> {{ item.usersurname }}</span>
+          </h1>
         </div>
-
-        <FontAwesomeIcon :icon="faHouse" />
+        <ul v-for="title in item.navtitle" :key="title">
+          <li>{{ title.title }}</li>
+          <FontAwesomeIcon :icon="faHouse" />
+        </ul>
+        <div class="mainBtn">
+          <button>{{ item.btnTitle }}</button>
+        </div>
+      </div>
     </div>
   </main>
 </template>
 
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faHouse } from '@awesome.me/kit-KIT_CODE/icons/classic/solid'
-import { faTree } from '@awesome.me/kit-KIT_CODE/icons/sharp/solid'
-import { faDog } from '@awesome.me/kit-KIT_CODE/icons/duotone/solid'
-import { faDragon } from '@awesome.me/kit-KIT_CODE/icons/sharp-duotone/solid'
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 export default {
-    data() {
-        return {
-            
-        }
-    },
+  data() {
+    return {
+      navbartitle: [
+        {
+          userName: "Musurmon",
+          usersurname: "Azamqulov",
+          navtitle: [
+            { title: "Asosiy", link: "/" },
+            { title: "Loyihalar", link: "/about" },
+            { title: "Blog", link: "/blog" },
+            { title: "Aloqa", link: "/contact" },
+          ],
+          btnTitle: "Birga ishlang ",
+        },
+      ],
+    };
+  },
 };
 </script>
 

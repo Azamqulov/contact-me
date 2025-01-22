@@ -2,7 +2,7 @@
   <div>
     <BackgroundAnimation />
     <div class="content">
-      
+      <Navbar />
       <h1>Asosiy sahifa mazmuni</h1>
     </div>
   </div>
@@ -13,6 +13,7 @@
 import BackgroundAnimation from "./components/BackgroundAnimation.vue";
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
+import Navbar from "./components/Navbar.vue";
 </script>
 
 <style >
