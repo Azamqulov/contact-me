@@ -1,23 +1,26 @@
+<template>
+  <div>
+    <BackgroundAnimation />
+    <div class="content">
+      
+      <h1>Asosiy sahifa mazmuni</h1>
+    </div>
+  </div>
+
+  <RouterView />
+</template>
 <script setup>
+import BackgroundAnimation from "./components/BackgroundAnimation.vue";
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
-<template>
-  <header>
-    <h1 class="bg-slate-600">Hello world</h1>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav></nav>
-    </div>
-  </header>
-
-  <RouterView />
-</template>
-
-<style scoped>
-header {
-  line-height: 1.5;
+<style >
+.content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  margin-top: 20vh;
 }
 </style>
