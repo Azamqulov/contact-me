@@ -1,11 +1,13 @@
 <template>
   <div>
-    <BackgroundAnimation />
     <div class="content">
       <Navbar />
-      <h1>Asosiy sahifa mazmuni</h1>
+      <main>
+        
+      </main>
     </div>
   </div>
+  <BackgroundAnimation />
 
   <RouterView />
 </template>
@@ -22,6 +24,5 @@ import Navbar from "./components/Navbar.vue";
   z-index: 1;
   color: #fff;
   text-align: center;
-  margin-top: 20vh;
 }
 </style>

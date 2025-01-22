@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed inset-0 bg-black overflow-hidden z-[-1]">
+    <div class="fixed inset-0 bg-gray-950 overflow-hidden z-[-1]">
       <canvas ref="canvas" class="block w-full h-full"></canvas>
     </div>
   </template>
