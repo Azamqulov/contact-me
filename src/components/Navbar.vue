@@ -7,8 +7,8 @@
         :key="item"
       >
         <div class="logo flex items-center">
-          <h1 class="text-2xl">
-            <i :class="item.menuIcon"></i>
+          <h1 class="text-2xl title-text cursor-pointer">
+            <i :class="item.menuIcon" class="dark:text-white"></i>
             {{ item.userName }}
             <span class="text-blue-600"> {{ item.usersurname }}</span>
           </h1>
@@ -19,14 +19,15 @@
           class="navTitle flex justify-between"
         >
           <li
-            class="flex items-center justify-center content-center m-auto hover:bg-gray-900 py-2 px-5 rounded-lg"
+            class="  flex items-center justify-center content-center m-auto hover:bg-gray-900 py-2 px-5 rounded-lg active active:bg-gray-900 transition duration-100 cursor-pointer "
+            @click="$router.push(title.link)"
           >
             <i :class="title.icon" class="pr-3"></i>{{ title.title }}
           </li>
         </ul>
         <div class="mainBtn">
           <button
-            class="bg-slate-900 px-6 py-2 rounded-lg hover:bg-blue-600 ease-linear"
+            class="bg-slate-900 px-6 py-2 rounded-lg hover:bg-blue-600 ease-linear duration-100"
           >
             {{ item.btnTitle }} <i :class="item.btnIcon"></i>
           </button>
@@ -69,6 +70,13 @@ export default {
 .logo {
   width: 40%;
 }
+.title-text:hover span {
+  color: #fff;
+}
+.title-text:hover {
+  color: blue;
+}
+
 .navTitle {
   width: 10%;
 }
