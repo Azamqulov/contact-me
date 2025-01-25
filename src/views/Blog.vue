@@ -1,12 +1,11 @@
 <script setup>
 // import TheWelcome from '../components/TheWelcome.vue'
-
 </script>
 
 <template>
-  <main>
-    <h1 class="text-3xl font-bold underline border-l-green-950">
-    Hello world!
-  </h1>
-  </main>
+  <div class="aboute">
+    <div class="container">
+      <h1 class="text-3xl font-bold text-white">Hello world!</h1>
+    </div>
+  </div>
 </template>

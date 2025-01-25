@@ -4,9 +4,9 @@
       <Navbar />
       <main>
         <div class="content">
-          <div class="container flex py-5 px-2 justify-between">
-            <ContactMe />
-           
+          <div class="container  py-5 px-2 2xl:flex xl:flex md:block">
+            <ContactMe  class="flex md:w-full" />
+            <router-view />
           </div>
         </div>
       </main>
@@ -14,7 +14,7 @@
   </div>
   <BackgroundAnimation />
 
-  <RouterView />
+  <!-- <RouterView /> -->
 </template>
 <script setup>
 import BackgroundAnimation from "./components/BackgroundAnimation.vue";
@@ -24,7 +24,7 @@ import Navbar from "./components/Navbar.vue";
 import ContactMe from "./components/ContactMe.vue";
 </script>
 
-<style >
+<style  scoped>
 .content {
   position: relative;
   z-index: 1;

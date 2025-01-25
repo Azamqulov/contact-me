@@ -1,14 +1,16 @@
 <template>
-  <div class="main-content text-white bg-black rounded-xl">
-    <div class="container p-5 text-start" v-for="user in userData" :key="user">
-      <div class="images h-56 w-full rounded-xl border-4 border-green-950">
+  <div class="main-content text-white dark:bg-black rounded-xl w-screen">
+    <div class="container p-4 text-start" v-for="user in userData" :key="user">
+      <div class="images h-60 w-full rounded-xl ">
         <img :src="user.userImage" class="rounded-xl w-full h-full" alt="" />
       </div>
       <h1 class="text-3xl font-bold text-start border-l-green-950 py-5">
         {{ user.userName }}
       </h1>
       <p>{{ user.userTitle }}</p>
-      <div class="allBtn py-5 flex justify-between pr-6 font-bold">
+      <div
+        class="allBtn py-5 flex justify-between xl:pr-6 font-bold xl:justify-start lg:py-0 lg:text-sm lg:pr-0"
+      >
         <button
           class="hover:bg-blue-900 px-4 py-3 rounded-lg bg-blue-600 ease-linear duration-150"
         >
@@ -22,9 +24,9 @@
       </div>
       <ul class="userSocial" v-for="icons in user.userSocial" :key="icons">
         <li
-          class="allIcon  text-2xl bg-slate-900 rounded-lg px-3 py-2 hover:text-blue-600 hover:shadow-gray-500 mr-6"
+          class="allIcon text-2xl bg-slate-900 rounded-lg px-3 py-2 hover:text-blue-600 hover:shadow-gray-500 mr-6"
         >
-          <i :class="icons.icon" class="rounded-sm "></i>
+          <i :class="icons.icon" class="rounded-sm"></i>
         </li>
       </ul>
     </div>
@@ -40,8 +42,7 @@ export default {
           userName: "Musurmon Azamqulov",
           userTitle:
             "Tadbirkor, Full Stack Dasturchi 🖥️ & Youtuber, Startup Asoschi, PHP & Laravel Developer.",
-          userImage:
-            "https://t3.ftcdn.net/jpg/06/01/17/18/360_F_601171862_l7yZ0wujj8o2SowiKTUsfLEEx8KunYNd.jpg",
+          userImage: "https://sukhrob.uz/assets/img/profile.jpg",
           userSocial: [
             {
               title: "Facebook",
@@ -76,10 +77,18 @@ export default {
 };
 </script>
 
-<style>
+<style leng="css" scoped>
 .main-content {
-  width: 29%;
-  height: 75vh;
+  width: 30%;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .main-content {
+    width: 100% !important;
+  }
+  .images{
+    height: 100vh !important; 
+  }
 }
 .userSocial {
   display: inline-flex;

@@ -7,8 +7,8 @@
         :key="item"
       >
         <div class="logo flex items-center">
-          <h1 class="text-2xl title-text cursor-pointer">
-            <i :class="item.menuIcon" class="dark:text-white"></i>
+          <h1 class="text-2xl title-text cursor-pointer xl:text-xl">
+            <i :class="item.menuIcon" class="dark:text-white lg:hidden"></i>
             {{ item.userName }}
             <span class="text-blue-600"> {{ item.usersurname }}</span>
           </h1>
@@ -16,10 +16,10 @@
         <ul
           v-for="title in item.navtitle"
           :key="title"
-          class="navTitle flex justify-between"
+          class="navTitle flex justify-between "
         >
           <li
-            class="  flex items-center justify-center content-center m-auto hover:bg-gray-900 py-2 px-5 rounded-lg active active:bg-gray-900 transition duration-100 cursor-pointer "
+            class="flex items-center justify-center content-center m-auto hover:bg-gray-900 py-2 px-5 rounded-lg active active:bg-gray-900 transition duration-100 cursor-pointer"
             @click="$router.push(title.link)"
           >
             <i :class="title.icon" class="pr-3"></i>{{ title.title }}
@@ -63,6 +63,15 @@ export default {
 </script>
 
 <style lang="css">
+@media (max-width: 1024px) {
+  .navTitle {
+    display: none;
+  }
+  .title-text{
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
 .navbar {
   border-radius: 13px;
   box-shadow: inset 0 0 1px #ffffff96;
@@ -83,6 +92,5 @@ export default {
 .mainBtn {
   width: 40%;
   text-align: end;
-  margin: 0 auto;
 }
 </style>
